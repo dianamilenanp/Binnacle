@@ -15,7 +15,7 @@ module.exports = router;
 
 
  
-//Consultar todos los usuarios
+//Consultar todos los usuarios en la base de datos
 router.get("/usuario", (req, res) => {
     userSchema.find()
         .then((data) => res.json(data))
