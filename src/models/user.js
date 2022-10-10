@@ -49,5 +49,6 @@ const mongoose = require("mongoose"); // importando el componente mogoose
         required: true
     }
 });
+
 module.exports = mongoose.model('user', userSchema);
 
