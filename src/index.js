@@ -2,7 +2,7 @@ const parser = require("body-parser");
 const express = require("express");
 const app = express();
 const port = 9000;
-const userRoutes = require("./routes/user");
+const userRoutes = require("./routes/user"); // conexion user
 //const taskRoutes = require("./routes/task");
 const mongoose = require("mongoose");
 
