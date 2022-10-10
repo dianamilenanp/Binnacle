@@ -23,7 +23,7 @@ router.get("/usuario", (req, res) => {
 });
 
 
-//Consultar un usuario por su id
+//Consultar un usuario por su id en la base de datos
 router.get("/usuario/:id", (req, res) => {
     const { id } = req.params;
     userSchema
