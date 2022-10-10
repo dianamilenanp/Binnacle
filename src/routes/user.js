@@ -32,7 +32,7 @@ router.get("/usuario/:id", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
-//Modificar el nombre de un usuario por su id
+//Modificar el nombre de un usuario por su id en la base de datos
 router.put("/usuario/:id", (req, res) => {
     const { id } = req.params;
     const { nombre, apellido, curso, rol, correo_usuario, telefono_usuario, grado_usuario, correo_contacto, telefono_contacto, grado_contacto, observaciones, contraseña } = req.body;
@@ -45,7 +45,7 @@ router.put("/usuario/:id", (req, res) => {
 });
 
 
-//Eliminar un usuario por su id
+//Eliminar un usuario por su id en la base de datos
 router.delete("/usuario/:id", (req, res) => {
     const { id } = req.params;
     userSchema
