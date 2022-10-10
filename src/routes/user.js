@@ -45,6 +45,7 @@ router.put("/usuario/:id", (req, res) => {
 });
 
 
+
 //Eliminar un usuario por su id en la base de datos
 router.delete("/usuario/:id", (req, res) => {
     const { id } = req.params;
