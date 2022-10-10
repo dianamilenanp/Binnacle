@@ -11,7 +11,7 @@ app.use(parser.urlencoded({ extended: false })); //permite leer los datos que vi
 app.use(parser.json()); // transforma los datos a formato JSON
 
 //Gestión de las rutas usando el middleware
-app.use("/api", userRoutes);
+app.use("/api", userRoutes); //conexion user
 //app.use("/api", taskRoutes);
 app.use(express.json());
 
