@@ -154,6 +154,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET ACTIVITY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/actividad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"actividad"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
