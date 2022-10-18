@@ -246,6 +246,27 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "DELETE ACTIVITY",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/actividad/6339d25fb4d3b928aa88d2a1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"actividad",
+						"6339d25fb4d3b928aa88d2a1"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
