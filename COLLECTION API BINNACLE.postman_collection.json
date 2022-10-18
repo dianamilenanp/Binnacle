@@ -53,6 +53,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "PUT USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"camila\",\r\n    \"apellido\":\"ruiz\",\r\n    \"curso\":\"702B\",\r\n    \"rol\": \"Estudiante\",\r\n    \"correo_usuario\":\"andrea_ruiz@santarosa.edu.co\",\r\n    \"telefono_usuario\":\"123456\",\r\n    \"grado_usuario\":\"profesional\",\r\n    \"correo_contacto\":\"ana_cardona@gmail.com\",\r\n    \"telefono_contacto\":\"987456\",\r\n    \"observaciones\":\"ninguna\",\r\n    \"contraseña\":\"Andrea123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/usuario/6339d25fb4d3b928aa88d2a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario",
+						"6339d25fb4d3b928aa88d2a5"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
