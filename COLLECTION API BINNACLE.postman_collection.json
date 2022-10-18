@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "2d58323e-7484-4a99-8063-23fd76f64716",
+		"name": "COLLECTION API BINNACLE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"andrea\",\r\n    \"apellido\":\"ruiz\",\r\n    \"curso\":\"702B\",\r\n    \"rol\": \"Estudiante\",\r\n    \"correo_usuario\":\"andrea_ruiz@santarosa.edu.co\",\r\n    \"telefono_usuario\":\"123456\",\r\n    \"grado_usuario\":\"profesional\",\r\n    \"correo_contacto\":\"ana_cardona@gmail.com\",\r\n    \"telefono_contacto\":\"987456\",\r\n    \"observaciones\":\"ninguna\",\r\n    \"contraseña\":\"Andrea123\",\r\n    \"tareas\": [{\"_id\": \"6335e326fab1a7b7ce81f6aa\"}]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
