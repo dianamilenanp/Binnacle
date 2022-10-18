@@ -33,6 +33,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
