@@ -83,6 +83,27 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/usuario/6339d25fb4d3b928aa88d2a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario",
+						"6339d25fb4d3b928aa88d2a5"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
