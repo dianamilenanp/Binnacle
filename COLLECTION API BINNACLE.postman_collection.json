@@ -174,6 +174,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "PUT ACTIVITY",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"hacer esposición\",\r\n    \"fecha_inicial\":\"21/10/2000\",\r\n    \"fecha_final\":\"21/10/2022\",\r\n    \"hora_inicial\":\"1:00\",\r\n    \"hora_final\":\"3:00\",\r\n    \"descripcion\":\"hacer esposición matematicas\",\r\n    \"estado_avance\":\"alto\",\r\n    \"prioridad\":\"media\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/task/6339d25fb4d3b928aa88d2a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"task",
+						"6339d25fb4d3b928aa88d2a5"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
