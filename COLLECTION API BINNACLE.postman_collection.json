@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "2d58323e-7484-4a99-8063-23fd76f64716",
+		"name": "COLLECTION API BINNACLE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"andrea\",\r\n    \"apellido\":\"ruiz\",\r\n    \"curso\":\"702B\",\r\n    \"rol\": \"Estudiante\",\r\n    \"correo_usuario\":\"andrea_ruiz@santarosa.edu.co\",\r\n    \"telefono_usuario\":\"123456\",\r\n    \"grado_usuario\":\"profesional\",\r\n    \"correo_contacto\":\"ana_cardona@gmail.com\",\r\n    \"telefono_contacto\":\"987456\",\r\n    \"observaciones\":\"ninguna\",\r\n    \"contraseña\":\"Andrea123\",\r\n    \"tareas\": [{\"_id\": \"6335e326fab1a7b7ce81f6aa\"}]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"camila\",\r\n    \"apellido\":\"ruiz\",\r\n    \"curso\":\"702B\",\r\n    \"rol\": \"Estudiante\",\r\n    \"correo_usuario\":\"andrea_ruiz@santarosa.edu.co\",\r\n    \"telefono_usuario\":\"123456\",\r\n    \"grado_usuario\":\"profesional\",\r\n    \"correo_contacto\":\"ana_cardona@gmail.com\",\r\n    \"telefono_contacto\":\"987456\",\r\n    \"observaciones\":\"ninguna\",\r\n    \"contraseña\":\"Andrea123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/usuario/6339d25fb4d3b928aa88d2a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario",
+						"6339d25fb4d3b928aa88d2a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/usuario/6339d25fb4d3b928aa88d2a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario",
+						"6339d25fb4d3b928aa88d2a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ID USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/usuario/6339d25fb4d3b928aa88d2a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"usuario",
+						"6339d25fb4d3b928aa88d2a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ACTIVITY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"hacer esposición\",\r\n    \"fecha_inicial\":\"21/10/2000\",\r\n    \"fecha_final\":\"21/10/2022\",\r\n    \"hora_inicial\":\"1:00\",\r\n    \"hora_final\":\"3:00\",\r\n    \"descripcion\":\"hacer esposición matematicas\",\r\n    \"estado_avance\":\"alto\",\r\n    \"prioridad\":\"media\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/actividad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"actividad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ACTIVITY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/actividad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"actividad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ACTIVITY",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"hacer esposición\",\r\n    \"fecha_inicial\":\"21/10/2000\",\r\n    \"fecha_final\":\"21/10/2022\",\r\n    \"hora_inicial\":\"1:00\",\r\n    \"hora_final\":\"3:00\",\r\n    \"descripcion\":\"hacer esposición matematicas\",\r\n    \"estado_avance\":\"alto\",\r\n    \"prioridad\":\"media\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/task/6339d25fb4d3b928aa88d2a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"task",
+						"6339d25fb4d3b928aa88d2a5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
