@@ -10,3 +10,10 @@ const taskSchema = require("../models/task");
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+
+//Consultar todas las actividades
+router.get("/actividad", (req, res) => {
+    taskSchema.find()
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
