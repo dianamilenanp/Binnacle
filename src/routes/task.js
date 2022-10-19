@@ -26,3 +26,15 @@ router.get("/actividad/:id", (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+
+//Modificar el nombre de una actividad por su id
+router.put("/actividad/:id", (req, res) => {
+    const { id } = req.params;
+    const { nombre_actividad, fecha_inicial, fecha_final, hora_inicial, hora_final, descripcion, estado_avance } = req.body;
+    taskSchema
+        .updateOne({ _id: id }, {
+             $set: { nombre_actividad, fecha_inicial, fecha_final, hora_inicial, hora_final, descripcion, estado_avance }
+        })
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
