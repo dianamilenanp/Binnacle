@@ -11,14 +11,14 @@ const taskSchema = require("../models/task");
         .catch((error) => res.json({ message: error }));
 });
 
-//Consultar todas las actividades
+//Consultar todas las actividades en la base de datos
 router.get("/actividad", (req, res) => {
     taskSchema.find()
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
 
-//Consultar una actividad por su id
+//Consultar una actividad por su id en la base de datos 
 router.get("/actividad/:id", (req, res) => {
     const { id } = req.params;
     taskSchema
@@ -27,7 +27,7 @@ router.get("/actividad/:id", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
-//Modificar el nombre de una actividad por su id
+//Modificar el nombre de una actividad por su id en la base de datos
 router.put("/actividad/:id", (req, res) => {
     const { id } = req.params;
     const { nombre_actividad, fecha_inicial, fecha_final, hora_inicial, hora_final, descripcion, estado_avance } = req.body;
@@ -39,7 +39,7 @@ router.put("/actividad/:id", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
-//Eliminar una actividad por su id
+//Eliminar una actividad por su id en la base de datos
 router.delete("/actividad/:id", (req, res) => {
     const { id } = req.params;
     taskSchema
