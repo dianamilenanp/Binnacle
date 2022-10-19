@@ -13,11 +13,11 @@ const mongoose = require("mongoose"); // importando el componente mongoose
         required: true
     },
     hora_inicial: {
-        type: Time,
+        type: Date,
         required: true
     },
     hora_final: {
-        type: Time,
+        type: Date,
         required: true
     },
     descripcion: {

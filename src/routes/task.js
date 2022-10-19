@@ -3,7 +3,7 @@ const router = express.Router(); //manejador de rutas de express
 const taskSchema = require("../models/task");
 
  //Nueva Actividad
- router.post("/actividad", (req, res) => {
+router.post("/actividad", (req, res) => {
     const task = taskSchema(req.body);
     task
         .save()
