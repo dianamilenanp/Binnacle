@@ -38,3 +38,12 @@ router.put("/actividad/:id", (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+
+//Eliminar una actividad por su id
+router.delete("/actividad/:id", (req, res) => {
+    const { id } = req.params;
+    taskSchema
+        .remove({ _id: id })
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
