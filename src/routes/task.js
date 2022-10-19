@@ -17,3 +17,12 @@ router.get("/actividad", (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+
+//Consultar una actividad por su id
+router.get("/actividad/:id", (req, res) => {
+    const { id } = req.params;
+    taskSchema
+        .findById(id)
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
