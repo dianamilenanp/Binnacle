@@ -2,8 +2,8 @@ const parser = require("body-parser");
 const express = require("express");
 const app = express();
 const port = 9000;
-//const userRoutes = require("./routes/user");
-//const taskRoutes = require("./routes/task");
+const taskRoutes = require("./routes/task"); //conexión task
+const userRoutes = require("./routes/user"); // conexion user
 const mongoose = require("mongoose");
 
 require("dotenv").config();
@@ -11,8 +11,8 @@ app.use(parser.urlencoded({ extended: false })); //permite leer los datos que vi
 app.use(parser.json()); // transforma los datos a formato JSON
 
 //Gestión de las rutas usando el middleware
-//app.use("/api", userRoutes);
-//app.use("/api", taskRoutes);
+app.use("/api", taskRoutes); //conexión task
+app.use("/api", userRoutes); //conexion user
 app.use(express.json());
 
 //Conexión a la base de datos
