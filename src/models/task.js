@@ -1,6 +1,10 @@
 const mongoose = require("mongoose"); // importando el componente mongoose
  const taskSchema = mongoose.Schema({
-    nombre_actividad: {
+    codigo: {
+        type: String,
+        required: true
+    },
+    titulo: {
         type: String,
         required: true
     },
@@ -13,11 +17,11 @@ const mongoose = require("mongoose"); // importando el componente mongoose
         required: true
     },
     hora_inicial: {
-        type: Date,
+        type: String,
         required: true
     },
     hora_final: {
-        type: Date,
+        type: String,
         required: true
     },
     descripcion: {
@@ -27,6 +31,9 @@ const mongoose = require("mongoose"); // importando el componente mongoose
     estado_avance: {
         type: String,
         required: true
-    },
+    },prioridad: {
+        type: String,
+        required: true
+    }
 });
 module.exports = mongoose.model('task', taskSchema);
