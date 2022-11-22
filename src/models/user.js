@@ -47,7 +47,9 @@ const mongoose = require("mongoose"); // importando el componente mongoose
     contraseña: {
         type: String,
         required: true
-    }
+    },
+    tarea: [{
+        type: mongoose.Schema.Types.ObjectId, ref: 'task'}]
 });
 
 module.exports = mongoose.model('user', userSchema);

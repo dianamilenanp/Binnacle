@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router(); //manejador de rutas de express
 const userSchema = require("../models/user");
+const taskSchema = require("../models/task");
 
  //Nuevo Usuario
 router.post("/usuario", (req, res) => {
@@ -12,7 +13,6 @@ router.post("/usuario", (req, res) => {
 });
 
 module.exports = router;
-
 
  
 //Consultar todos los usuarios en la base de datos
@@ -44,6 +44,29 @@ router.put("/usuario/:id", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+
+//Modificar los datos para agregar una actividad
+router.put("/usuarioa/:id", async(req, res) => {
+    const { id } = req.params;
+    const task = taskSchema(req.body);
+    var idtask = null;
+    const taskConsulta = await taskSchema.findOne({ codigo: req.body.codigo});
+    if(!taskConsulta){
+        await task.save().then((dataTask) => {
+            idtask = dataTask._id;
+        });
+
+     } else {
+        idtask =taskConsulta._id;
+
+     }
+    userSchema
+        .updateOne({ _id: id }, {
+            $addToSet: {tarea: idtask}
+        })
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
 
 
 //Eliminar un usuario por su id en la base de datos

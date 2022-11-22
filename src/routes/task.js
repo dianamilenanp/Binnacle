@@ -3,7 +3,7 @@ const router = express.Router(); //manejador de rutas de express
 const taskSchema = require("../models/task");
 
  //Nueva Actividad
- router.post("/actividad", (req, res) => {
+router.post("/actividad", (req, res) => {
     const task = taskSchema(req.body);
     task
         .save()
@@ -30,10 +30,10 @@ router.get("/actividad/:id", (req, res) => {
 //Modificar el nombre de una actividad por su id en la base de datos
 router.put("/actividad/:id", (req, res) => {
     const { id } = req.params;
-    const { nombre_actividad, fecha_inicial, fecha_final, hora_inicial, hora_final, descripcion, estado_avance } = req.body;
+    const { titulo, fecha_inicial, fecha_final, hora_inicial, hora_final, descripcion, estado_avance, prioridad } = req.body;
     taskSchema
         .updateOne({ _id: id }, {
-             $set: { nombre_actividad, fecha_inicial, fecha_final, hora_inicial, hora_final, descripcion, estado_avance }
+             $set: { titulo, fecha_inicial, fecha_final, hora_inicial, hora_final, descripcion, estado_avance, prioridad }
         })
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
